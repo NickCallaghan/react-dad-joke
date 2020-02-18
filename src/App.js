@@ -13,9 +13,10 @@ export default class App extends Component {
   };
 
   fetchJokes = async () => {
+    console.log("fetching jokes");
     // Individual request to get x number of jokes and push to array
     let jokes = [];
-    try {
+    for (let i = 0; i < 10; i++) {
       const url = "https://icanhazdadjoke.com/";
       const resp = await axios.get(url, {
         headers: {
@@ -24,11 +25,7 @@ export default class App extends Component {
       });
       const joke = resp.data;
       jokes.push(joke);
-    } catch (err) {
-      console.error(err);
     }
-
-    // Add Jokes to any jokes currently in state
     this.setState(st => ({
       jokes: [...st.jokes, ...jokes]
     }));
