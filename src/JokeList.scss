@@ -1,0 +1,30 @@
+.Jokelist {
+  display: flex;
+  height: 80%;
+  width: 80%;
+  padding: 0 0 0 0;
+  background-color: white;
+  border-radius: 25px;
+  border: 5px solid white;
+  -webkit-box-shadow: -2px -2px 79px -2px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: -2px -2px 79px -2px rgba(0, 0, 0, 0.65);
+  box-shadow: -2px -2px 79px -2px rgba(0, 0, 0, 0.65);
+
+  .Jokelist-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 4em;
+    background-color: purple;
+    margin: 0;
+    color: white;
+    border-radius: 25px 0 0 25px;
+  }
+
+  .Jokelist-jokes {
+    padding: 0;
+    margin: 0 0 2em;
+    overflow: scroll;
+  }
+}
