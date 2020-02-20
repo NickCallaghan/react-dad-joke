@@ -1,4 +1,24 @@
-.vote-up {
-  background-color: yellow;
+.vote {
+  background-color: royalblue;
   background-origin: 50%;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  flex: 0 0 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  margin: 0 1em 0 0;
+
+  .vote-up,
+  .vote-down {
+    cursor: pointer;
+  }
+
+  .vote-count {
+    margin: 0 0.5em;
+  }
 }

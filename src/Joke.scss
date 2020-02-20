@@ -1,4 +1,12 @@
 .Joke {
   padding: 1.5em 2em;
   border-top: 1px solid grey;
+  display: flex;
+  flex-direction: row;
+
+  .Joke-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

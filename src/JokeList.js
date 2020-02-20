@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Joke from "./Joke";
 import Laugh from "./laugh.svg";
 import "./JokeList.scss";
+import Spinner from "./Spinner";
 
 export default class JokeList extends Component {
   render() {
@@ -12,15 +13,21 @@ export default class JokeList extends Component {
             <span>Dad</span> Jokes
           </h2>
           <img src={Laugh} alt="Laughing Face" />
-          <button onClick={this.props.getJokes} className="Jokelist-getmore">
+          <button
+            onClick={this.props.getJokes}
+            className="Jokelist-getmore"
+            onClick={this.props.getManyJokes}
+          >
             Get More Jokes
           </button>
         </div>
         <div className="Jokelist-jokes">
-          {this.props.jokes ? (
-            this.props.jokes.map(jk => <Joke key={jk.id} joke={jk} />)
+          {this.props.jokes.length !== 0 ? (
+            this.props.jokes.map(jk => (
+              <Joke key={jk.id} joke={jk} voteOnJoke={this.props.voteOnJoke} />
+            ))
           ) : (
-            <p>No Jokes</p>
+            <Spinner />
           )}
         </div>
       </div>
