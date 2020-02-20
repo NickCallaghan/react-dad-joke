@@ -10,11 +10,11 @@ export default class JokeList extends Component {
       <div className="Jokelist">
         <div className="Jokelist-sidebar">
           <h2 className="Jokelist-title">
+            <div>Get</div>
             <span>Dad</span> Jokes
           </h2>
           <img src={Laugh} alt="Laughing Face" />
           <button
-            onClick={this.props.getJokes}
             className="Jokelist-getmore"
             onClick={this.props.getManyJokes}
           >
