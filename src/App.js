@@ -33,6 +33,21 @@ export default class App extends Component {
     }
   };
 
+  saveJokeToLocalStorage = () => {
+    console.log("Saving to LocalStorage");
+    const jokeString = JSON.stringify(this.state.jokes);
+    const localStorage = window.localStorage;
+    localStorage.setItem("jokes", jokeString);
+  };
+
+  loadJokesFromLocalStorage = () => {
+    const localStorage = window.localStorage;
+    if (localStorage.getItem("jokes")) {
+      const jokes = JSON.parse(localStorage.getItem("jokes"));
+      this.setState({ jokes });
+    }
+  };
+
   // Get more jokes and add to state
   getManyJokes = async (event, numJokes = 10) => {
     const existingJokeIds = this.state.jokes.map(jk => jk.id);
@@ -56,9 +71,10 @@ export default class App extends Component {
       console.error(err);
     }
     //update new jokes into state
-    this.setState({
+    await this.setState({
       jokes: [...this.state.jokes, ...newJokes]
     });
+    this.saveJokeToLocalStorage();
   };
 
   // Vote a joke up or down
@@ -74,7 +90,10 @@ export default class App extends Component {
   };
 
   async componentDidMount() {
-    this.getManyJokes(null, this.props.numJokesToGet);
+    this.loadJokesFromLocalStorage();
+    if (this.state.jokes.length === 0) {
+      this.getManyJokes(null, this.props.numJokesToGet);
+    }
   }
 
   render() {

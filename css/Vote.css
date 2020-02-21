@@ -1,0 +1,40 @@
+.vote {
+  background-origin: 50%;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75px;
+          flex: 0 0 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-weight: bold;
+  margin: 0 1em 0 0;
+  border: 1px solid lightgrey;
+  -webkit-box-shadow: -2px -2px 20px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px -2px 20px -2px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.vote-up,
+.vote-down {
+  cursor: pointer;
+}
+
+.vote-count {
+  margin: 0 0.5em;
+  font-weight: bold;
+}
+/*# sourceMappingURL=Vote.css.map */
