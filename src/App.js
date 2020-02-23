@@ -87,6 +87,7 @@ export default class App extends Component {
       return jk;
     });
     this.setState({ jokes });
+    this.saveJokeToLocalStorage()
   };
 
   async componentDidMount() {
