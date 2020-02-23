@@ -95,10 +95,11 @@ export default class App extends Component {
   }
 
   render() {
+    let jokes = this.state.jokes.sort((a, b) => b.votes - a.votes);
     return (
       <div className="App">
         <JokeList
-          jokes={this.state.jokes}
+          jokes={jokes}
           voteOnJoke={this.voteOnJoke}
           getManyJokes={this.getManyJokes}
         />
