@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/react-dad-joke/static/css/main.d8176b43.chunk.css",
-    "main.js": "/react-dad-joke/static/js/main.f0e0814f.chunk.js",
-    "main.js.map": "/react-dad-joke/static/js/main.f0e0814f.chunk.js.map",
+    "main.css": "/react-dad-joke/static/css/main.cb488365.chunk.css",
+    "main.js": "/react-dad-joke/static/js/main.7ca12659.chunk.js",
+    "main.js.map": "/react-dad-joke/static/js/main.7ca12659.chunk.js.map",
     "runtime-main.js": "/react-dad-joke/static/js/runtime-main.f008c801.js",
     "runtime-main.js.map": "/react-dad-joke/static/js/runtime-main.f008c801.js.map",
     "static/js/2.a47ec0e1.chunk.js": "/react-dad-joke/static/js/2.a47ec0e1.chunk.js",
     "static/js/2.a47ec0e1.chunk.js.map": "/react-dad-joke/static/js/2.a47ec0e1.chunk.js.map",
     "index.html": "/react-dad-joke/index.html",
-    "precache-manifest.7fd15d8d56bf6abf5c8519ee173f89a7.js": "/react-dad-joke/precache-manifest.7fd15d8d56bf6abf5c8519ee173f89a7.js",
+    "precache-manifest.db702177a95bc872943fcbf235d18fbc.js": "/react-dad-joke/precache-manifest.db702177a95bc872943fcbf235d18fbc.js",
     "service-worker.js": "/react-dad-joke/service-worker.js",
-    "static/css/main.d8176b43.chunk.css.map": "/react-dad-joke/static/css/main.d8176b43.chunk.css.map",
+    "static/css/main.cb488365.chunk.css.map": "/react-dad-joke/static/css/main.cb488365.chunk.css.map",
     "static/js/2.a47ec0e1.chunk.js.LICENSE.txt": "/react-dad-joke/static/js/2.a47ec0e1.chunk.js.LICENSE.txt",
     "static/media/laugh.svg": "/react-dad-joke/static/media/laugh.6fd227e4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f008c801.js",
     "static/js/2.a47ec0e1.chunk.js",
-    "static/css/main.d8176b43.chunk.css",
-    "static/js/main.f0e0814f.chunk.js"
+    "static/css/main.cb488365.chunk.css",
+    "static/js/main.7ca12659.chunk.js"
   ]
 }
