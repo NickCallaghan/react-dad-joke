@@ -8,9 +8,17 @@ export default class App extends Component {
     numJokesToGet: 15
   };
 
-  state = {
-    jokes: []
-  };
+  constructor(props) {
+    super(props);
+    //load jokes from localstorage or intialise jokes state empty
+    if (window.localStorage.getItem("jokes")) {
+      this.state = {
+        jokes: JSON.parse(window.localStorage.getItem("jokes"))
+      };
+    } else {
+      this.state = { jokes: [] };
+    }
+  }
 
   // Fetch a single joke
   getSingleJoke = async () => {
@@ -37,14 +45,6 @@ export default class App extends Component {
     const jokeString = JSON.stringify(this.state.jokes);
     const localStorage = window.localStorage;
     localStorage.setItem("jokes", jokeString);
-  };
-
-  loadJokesFromLocalStorage = async () => {
-    const localStorage = window.localStorage;
-    if (localStorage.getItem("jokes")) {
-      const jokes = JSON.parse(localStorage.getItem("jokes"));
-      await this.setState({ jokes });
-    }
   };
 
   // Get more jokes and add to state
@@ -88,7 +88,6 @@ export default class App extends Component {
   };
 
   async componentDidMount() {
-    await this.loadJokesFromLocalStorage();
     // Only fetch jokes if there are none in localstorage
     if (this.state.jokes.length === 0) {
       this.getManyJokes(null, this.props.numJokesToGet);
