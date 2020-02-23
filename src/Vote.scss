@@ -14,10 +14,11 @@
 .vote-count {
   margin: 0 0.5em;
   font-weight: bold;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 3px solid black;
 }

@@ -24,8 +24,7 @@ export default class App extends Component {
           }
         });
         const joke = resp.data;
-        console.log(joke);
-        return {id: joke.id, votes: 0, joke: joke.joke};
+        return { id: joke.id, votes: 0, joke: joke.joke };
       }
     } catch (err) {
       console.error(err);
@@ -63,8 +62,6 @@ export default class App extends Component {
           newJokes.push(joke);
           // push new joke id on to existing joke id list
           existingJokeIds.push(joke.id);
-        } else {
-          console.log("duplicate detected");
         }
       }
     } catch (err) {
@@ -87,7 +84,7 @@ export default class App extends Component {
       return jk;
     });
     this.setState({ jokes });
-    this.saveJokeToLocalStorage()
+    this.saveJokeToLocalStorage();
   };
 
   async componentDidMount() {
