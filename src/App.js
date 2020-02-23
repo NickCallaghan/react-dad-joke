@@ -24,8 +24,8 @@ export default class App extends Component {
           }
         });
         const joke = resp.data;
-        joke.votes = 0;
-        return joke;
+        console.log(joke);
+        return {id: joke.id, votes: 0, joke: joke.joke};
       }
     } catch (err) {
       console.error(err);
@@ -40,11 +40,11 @@ export default class App extends Component {
     localStorage.setItem("jokes", jokeString);
   };
 
-  loadJokesFromLocalStorage = () => {
+  loadJokesFromLocalStorage = async () => {
     const localStorage = window.localStorage;
     if (localStorage.getItem("jokes")) {
       const jokes = JSON.parse(localStorage.getItem("jokes"));
-      this.setState({ jokes });
+      await this.setState({ jokes });
     }
   };
 
@@ -91,7 +91,8 @@ export default class App extends Component {
   };
 
   async componentDidMount() {
-    this.loadJokesFromLocalStorage();
+    await this.loadJokesFromLocalStorage();
+    // Only fetch jokes if there are none in localstorage
     if (this.state.jokes.length === 0) {
       this.getManyJokes(null, this.props.numJokesToGet);
     }
