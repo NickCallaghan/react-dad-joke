@@ -29,13 +29,15 @@ export default class Vote extends Component {
 
   render() {
     return (
-      <div className="vote" style={this.style}>
+      <div className="vote">
         <div className="vote-down" onClick={() => this.handleVote(-1)}>
-          -
+          <i className="fas fa-arrow-down"></i>
         </div>
-        <div className="vote-count">{this.props.votes}</div>
+        <div className="vote-count" style={this.style}>
+          {this.props.votes}
+        </div>
         <div className="vote-up" onClick={() => this.handleVote(1)}>
-          +
+          <i className="fas fa-arrow-up"></i>
         </div>
       </div>
     );
